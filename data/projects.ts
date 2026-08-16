@@ -16,8 +16,8 @@ export const projects: readonly Project[] = [
       "React",
       "Tailwind CSS",
     ],
-    liveUrl: "https://helpdeskapi-e7cx.onrender.com/api",
-    githubUrl: "https://github.com/Rouue777/helpDeskApi",
+    liveUrl: "https://comida-feliz-web.onrender.com/login",
+    githubUrl: "https://github.com/Rouue777/comida-feliz-api",
   },
   {
     title: "Help Desk API",
