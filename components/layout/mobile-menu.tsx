@@ -1,6 +1,7 @@
 "use client";
 
 import { navigation } from "@/data/navigation";
+import { contactLinks } from "@/data/social-links";
 import { useEffect, useRef, useState } from "react";
 
 export function MobileMenu() {
@@ -84,9 +85,12 @@ export function MobileMenu() {
         </ul>
 
         <a
-          href="#contato"
+          href={contactLinks.whatsapp.href}
+          target="_blank"
+          rel="noopener noreferrer"
           className="button-base button-primary mt-4 w-full"
           onClick={closeMenu}
+          aria-label="Vamos conversar pelo WhatsApp (abre em nova aba)"
         >
           Vamos conversar
         </a>

@@ -1,4 +1,5 @@
 import { Container } from "@/components/ui/container";
+import { contactLinks } from "@/data/social-links";
 
 export function HeroSection() {
   return (
@@ -46,8 +47,11 @@ export function HeroSection() {
               Ver projetos
             </a>
             <a
-              href="#contato"
+              href={contactLinks.whatsapp.href}
+              target="_blank"
+              rel="noopener noreferrer"
               className="button-base button-secondary w-full sm:w-auto"
+              aria-label="Vamos conversar pelo WhatsApp (abre em nova aba)"
             >
               Vamos conversar
             </a>

@@ -1,6 +1,10 @@
 import { Container } from "@/components/ui/container";
 import { SocialLink } from "@/components/ui/social-link";
-import { socialLinks } from "@/data/social-links";
+import {
+  contactDetails,
+  contactLinks,
+  socialLinks,
+} from "@/data/social-links";
 
 function hasValidDestination(href: string) {
   return (
@@ -13,9 +17,6 @@ function hasValidDestination(href: string) {
 export function ContactSection() {
   const configuredLinks = socialLinks.filter((link) =>
     hasValidDestination(link.href),
-  );
-  const emailLink = configuredLinks.find((link) =>
-    link.href.startsWith("mailto:"),
   );
 
   return (
@@ -54,14 +55,27 @@ export function ContactSection() {
               Estou aberto a oportunidades, projetos e conexões profissionais.
             </p>
 
-            {emailLink ? (
-              <a
-                href={emailLink.href}
-                className="button-base button-primary mt-7 w-full sm:w-auto"
-              >
-                Entrar em contato
+            <a
+              href={contactLinks.whatsapp.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="button-base button-primary mt-7 w-full sm:w-auto"
+              aria-label="Entrar em contato pelo WhatsApp (abre em nova aba)"
+            >
+              Entrar em contato
+            </a>
+
+            <p className="mt-4 flex flex-col items-center gap-1 text-sm text-muted sm:flex-row sm:gap-2">
+              <a href={contactDetails.phone.href} className="hover:text-primary">
+                {contactDetails.phone.label}
               </a>
-            ) : null}
+              <span className="hidden sm:inline" aria-hidden="true">
+                ·
+              </span>
+              <a href={contactDetails.email.href} className="hover:text-primary">
+                {contactDetails.email.label}
+              </a>
+            </p>
 
             {configuredLinks.length > 0 ? (
               <nav className="mt-8" aria-label="Links de contato">

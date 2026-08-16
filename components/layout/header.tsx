@@ -1,6 +1,7 @@
 import { MobileMenu } from "@/components/layout/mobile-menu";
 import { Container } from "@/components/ui/container";
 import { navigation } from "@/data/navigation";
+import { contactLinks } from "@/data/social-links";
 
 export function Header() {
   return (
@@ -33,8 +34,11 @@ export function Header() {
         </nav>
 
         <a
-          href="#contato"
+          href={contactLinks.whatsapp.href}
+          target="_blank"
+          rel="noopener noreferrer"
           className="button-base button-primary hidden shrink-0 lg:inline-flex"
+          aria-label="Vamos conversar pelo WhatsApp (abre em nova aba)"
         >
           Vamos conversar
         </a>
