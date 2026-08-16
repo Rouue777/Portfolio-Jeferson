@@ -34,6 +34,7 @@ export type Language = {
 
 export type Project = {
   title: string;
+  image: string;
   description: string;
   technicalContext: string;
   technologies: readonly string[];

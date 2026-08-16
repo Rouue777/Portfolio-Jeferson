@@ -3,6 +3,7 @@ import type { Project } from "@/types/portfolio";
 export const projects: readonly Project[] = [
   {
     title: "Comida Feliz",
+    image: "/capaprojetocomidafeliz.png",
     description:
       "Sistema web para gerenciamento de pedidos de um restaurante, desenvolvido com foco em organização de pedidos, regras de negócio e integração entre frontend e backend.",
     technicalContext:
@@ -21,6 +22,7 @@ export const projects: readonly Project[] = [
   },
   {
     title: "Help Desk API",
+    image: "/capaprojetohelpdesk.png",
     description:
       "API para gerenciamento de tickets de suporte, com autenticação, controle de usuários, tickets, comentários e registros de operações.",
     technicalContext:

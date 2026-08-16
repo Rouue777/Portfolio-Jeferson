@@ -1,3 +1,4 @@
+import Image from "next/image";
 import type { Project } from "@/types/portfolio";
 import { TechnologyBadge } from "@/components/ui/technology-badge";
 
@@ -11,18 +12,15 @@ export function ProjectCard({ project }: ProjectCardProps) {
   return (
     <article className="portfolio-card flex h-full min-w-0 flex-col overflow-hidden p-0">
       <div
-        className="project-visual relative flex min-h-36 items-center justify-center overflow-hidden border-b border-border bg-surface"
-        aria-hidden="true"
+        className="project-visual relative aspect-video overflow-hidden border-b border-border bg-surface"
       >
-        <div className="absolute inset-0 opacity-30 [background-image:linear-gradient(to_right,var(--border)_1px,transparent_1px),linear-gradient(to_bottom,var(--border)_1px,transparent_1px)] [background-size:2rem_2rem]" />
-        <div className="absolute top-4 left-4 flex gap-1.5">
-          <span className="size-2 rounded-full bg-muted/40" />
-          <span className="size-2 rounded-full bg-secondary/60" />
-          <span className="size-2 rounded-full bg-primary/70" />
-        </div>
-        <span className="relative font-mono text-3xl font-semibold tracking-[-0.12em] text-primary/80">
-          {"{ }"}
-        </span>
+        <Image
+          src={project.image}
+          alt={`Capa do projeto ${project.title}`}
+          fill
+          className="object-cover object-center"
+          sizes="(min-width: 768px) 50vw, 100vw"
+        />
       </div>
 
       <div className="flex min-w-0 flex-1 flex-col p-card">
