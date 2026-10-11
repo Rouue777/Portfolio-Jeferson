@@ -28,7 +28,7 @@ export function ProjectsSection() {
         </header>
 
         <div
-          className="mt-12 grid min-w-0 items-stretch gap-6 md:grid-cols-2 lg:gap-8"
+          className="mt-12 grid min-w-0 items-stretch gap-6 md:grid-cols-3 lg:gap-8"
           data-reveal
           data-reveal-delay="1"
         >

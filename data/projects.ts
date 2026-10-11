@@ -41,4 +41,25 @@ export const projects: readonly Project[] = [
     liveUrl: "https://helpdeskapi-e7cx.onrender.com/api",
     githubUrl: "https://github.com/Rouue777/helpDeskApi",
   },
+  {
+  title: "DevFlow",
+  image: "/capaprojetodevflow.png",
+  description:
+    "Sistema full stack para gerenciamento de projetos e tarefas, com autenticação, controle de permissões e regras de negócio para organizar o fluxo de trabalho das equipes.",
+  technicalContext:
+    "Projeto full stack desenvolvido com foco em arquitetura backend, modelagem de dados, APIs REST, autenticação JWT, controle de acesso, testes automatizados e integração contínua.",
+  technologies: [
+    "NestJS",
+    "TypeScript",
+    "Prisma",
+    "PostgreSQL",
+    "Next.js",
+    "React",
+    "Tailwind CSS",
+    "Jest",
+    "GitHub Actions",
+  ],
+  liveUrl: "https://devflow-web-ifa1.onrender.com",
+  githubUrl: "https://github.com/Rouue777/devflow-api",
+}
 ];
