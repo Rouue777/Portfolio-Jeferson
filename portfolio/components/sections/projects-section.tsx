@@ -27,15 +27,21 @@ export function ProjectsSection() {
           </p>
         </header>
 
-        <div
-          className="mt-12 grid min-w-0 items-stretch gap-6 md:grid-cols-3 lg:gap-8"
-          data-reveal
-          data-reveal-delay="1"
-        >
-          {projects.map((project) => (
-            <ProjectCard key={project.title} project={project} />
-          ))}
-        </div>
+ <div
+  className="mt-12 grid min-w-0 items-stretch gap-6 md:grid-cols-2 lg:grid-cols-6 lg:gap-8"
+  data-reveal
+  data-reveal-delay="1"
+>
+  {projects.map((project, index) => {
+    // Os dois primeiros cards ocupam 3 colunas (metade do layout de 6)
+    // Os dois últimos ocupam 3 colunas também, ou você pode ajustar a distribuição
+    return (
+      <div key={project.title} className="lg:col-span-3">
+        <ProjectCard project={project} />
+      </div>
+    );
+  })}
+</div>
       </Container>
     </section>
   );
